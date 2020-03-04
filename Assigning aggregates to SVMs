@@ -1,0 +1,9 @@
+https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-5255E7D8-F420-4BD3-AEFB-7EF65488C65C.html
+
+1. login to NetApp cluster.
+
+2. Check the list of aggregates already assigned to the SVM:
+# vserver show -fields aggr-list
+
+3. Add assigned aggregates
+# vserver add-aggregates -vserver svm1 -aggregates aggr1,aggr2 
