@@ -1,0 +1,17 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: basic
+provisioner: csi.trident.netapp.io
+# mountOptions:
+allowVolumeExpansion: true
+# reclaimPolicy:
+parameters:
+  backendType: ontap-nas
+  media: hdd
+  provisioningType: thin
+  # snapshots: false
+  # clones: false
+  # encryption: false
+  # storagePools:
+  #   ontapnas_192.168.1.100: aggr1,aggr2
